@@ -11,4 +11,6 @@ var accountInfo = await client.AccountEndpoints.AccountInfo(new AccountInfoReque
     RecvWindow = 600000,
     Timestamp = DateTime.Now
 });
+var ethBalance = accountInfo.Balances.FirstOrDefault(b => b.Asset == "ETH");
+var totalEthAmount = ethBalance.Free+ethBalance.Locked;
 ```
