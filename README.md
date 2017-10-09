@@ -1,7 +1,7 @@
 # NetBinance
 Binance REST API .Net Wrapper 
 
-It is unofficial .Net wrapper of Binance API [Binance API](https://www.binance.com/restapipub.html)
+It is unofficial .Net wrapper of [Binance API](https://www.binance.com/restapipub.html)
 
 ## How-to use.
 ```
