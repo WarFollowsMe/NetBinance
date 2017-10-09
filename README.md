@@ -6,12 +6,15 @@ It is unofficial .Net wrapper of [Binance API](https://www.binance.com/restapipu
 ## How-to use.
 ```
 var client = new BinanceAPIClient(key, secret);
+
 var accountInfo = await client.AccountEndpoints.AccountInfo(new AccountInfoRequest
 {
     RecvWindow = 600000,
     Timestamp = DateTime.Now
 });
+
 var ethBalance = accountInfo.Balances.FirstOrDefault(b => b.Asset == "ETH");
+
 var totalEthAmount = ethBalance.Free+ethBalance.Locked;
 
 var orderInfo = await client.AccountEndpoints.NewOrder(new NewOrderRequest
@@ -25,6 +28,7 @@ var orderInfo = await client.AccountEndpoints.NewOrder(new NewOrderRequest
     RecvWindow = 600000,
     Timestamp = DateTime.Now
 });
+
 var orderStatus = await client.AccountEndpoints.CheckOrderStatus(new OrderStatusRequest
 {
     Symbol = "ETHBTC",
@@ -32,6 +36,7 @@ var orderStatus = await client.AccountEndpoints.CheckOrderStatus(new OrderStatus
     RecvWindow = 600000,
     Timestamp = DateTime.Now
 });
+
 var cancelOrder = await client.AccountEndpoints.CancelOrder(new CancelOrderRequest
 {
     Symbol = order.Symbol,
