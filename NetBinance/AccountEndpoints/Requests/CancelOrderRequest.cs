@@ -28,7 +28,7 @@ namespace NetBinance.AccountEndpoints.Requests
         public string GetUrlParameters()
         {
             var parameters = $"symbol={Symbol}&" +
-                (OrderID == null ? string.Empty : $"orderID={OrderID}&") +
+                (OrderID == null ? string.Empty : $"orderId={OrderID}&") +
                 (string.IsNullOrEmpty(OrigClientOrderId) ? string.Empty : $"origClientOrderId={OrigClientOrderId}&") +
                 (string.IsNullOrEmpty(NewClientOrderId) ? string.Empty : $"newClientOrderId={NewClientOrderId}&") +
                 (RecvWindow == null ? string.Empty : $"recvWindow={RecvWindow}&") +
