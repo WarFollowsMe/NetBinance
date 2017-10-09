@@ -35,7 +35,7 @@ namespace NetBinance.AccountEndpoints.Requests
         public string GetUrlParameters()
         {
             var parameters = $"symbol={Symbol}&" +
-                (OrderID == null ? string.Empty : $"orderID={OrderID}&") +
+                (OrderID == null ? string.Empty : $"orderId={OrderID}&") +
                 (Limit == null ? string.Empty : $"limit={Limit}&") +
                 (RecvWindow == null ? string.Empty : $"recvWindow={RecvWindow}&") +
                 $"timestamp={Timestamp.ToTimestamp()}";

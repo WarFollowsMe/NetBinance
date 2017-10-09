@@ -62,7 +62,6 @@
     <Compile Include="AccountEndpoints\Responces\CancelOrderResponse.cs" />
     <Compile Include="AccountEndpoints\CoinBalance.cs" />
     <Compile Include="AccountEndpoints\Responces\NewOrderResponse.cs" />
-    <Compile Include="AccountEndpoints\Responces\OrderStatusResponse.cs" />
     <Compile Include="API\API.cs" />
     <Compile Include="BinanceAPIClient.cs" />
     <Compile Include="Converters\DateTimeExtensions.cs" />
